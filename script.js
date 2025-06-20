@@ -9,7 +9,7 @@ const exercises = [
         category: "strength",
         sets: 3,
         reps: "10-15",
-        videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        videoUrl: "https://www.youtube.com/watch?v=IODxDxX7oi4",
         icon: "💪"
     },
     {
@@ -19,7 +19,7 @@ const exercises = [
         category: "strength",
         sets: 3,
         reps: "12-15",
-        videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        videoUrl: "https://www.youtube.com/watch?v=aclHkVaku9U",
         icon: "🏋️‍♂️"
     },
     {
@@ -29,7 +29,7 @@ const exercises = [
         category: "strength",
         sets: 3,
         reps: "30-45 seconds",
-        videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        videoUrl: "https://www.youtube.com/watch?v=ASdvN_XEl_c",
         icon: "🧘‍♂️"
     },
     {
@@ -39,7 +39,7 @@ const exercises = [
         category: "strength",
         sets: 3,
         reps: "10 each leg",
-        videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        videoUrl: "https://www.youtube.com/watch?v=3XDriUn0udo",
         icon: "🚶‍♂️"
     },
     {
@@ -49,7 +49,7 @@ const exercises = [
         category: "agility",
         sets: 3,
         reps: "30 seconds",
-        videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        videoUrl: "https://www.youtube.com/watch?v=oDdkytliOqE",
         icon: "🏃"
     },
     {
@@ -59,7 +59,7 @@ const exercises = [
         category: "agility",
         sets: 3,
         reps: "2-3 patterns",
-        videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        videoUrl: "https://www.youtube.com/watch?v=8jLOx-5QjYw",
         icon: "🪜"
     },
     {
@@ -69,7 +69,7 @@ const exercises = [
         category: "agility",
         sets: 3,
         reps: "5-6 cones",
-        videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        videoUrl: "https://www.youtube.com/watch?v=8jLOx-5QjYw",
         icon: "🔸"
     },
     {
@@ -79,7 +79,7 @@ const exercises = [
         category: "combo",
         sets: 3,
         reps: "8-10",
-        videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        videoUrl: "https://www.youtube.com/watch?v=auBLPXO8Fww",
         icon: "⚡"
     },
     {
@@ -89,7 +89,7 @@ const exercises = [
         category: "combo",
         sets: 3,
         reps: "10-12",
-        videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        videoUrl: "https://www.youtube.com/watch?v=8jLOx-5QjYw",
         icon: "🏐"
     },
     {
@@ -99,7 +99,7 @@ const exercises = [
         category: "combo",
         sets: 3,
         reps: "1 minute",
-        videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        videoUrl: "https://www.youtube.com/watch?v=1BZM2Vre5oc",
         icon: "🔄"
     },
     {
@@ -109,7 +109,7 @@ const exercises = [
         category: "cooldown",
         sets: 2,
         reps: "10 each direction",
-        videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        videoUrl: "https://www.youtube.com/watch?v=140RTNMciH8",
         icon: "🔄"
     },
     {
@@ -119,7 +119,7 @@ const exercises = [
         category: "cooldown",
         sets: 1,
         reps: "20-30 seconds each",
-        videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        videoUrl: "https://www.youtube.com/watch?v=4pKly2JojMw",
         icon: "🧘‍♀️"
     }
 ];
