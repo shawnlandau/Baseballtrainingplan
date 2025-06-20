@@ -243,14 +243,15 @@ function createExerciseCard(exercise) {
     // Extract YouTube video ID from URL
     let videoId = '';
     let embedUrl = '';
+    let isClip = false;
     
     if (exercise.videoUrl.includes('youtube.com/watch?v=')) {
         // Regular YouTube video
         videoId = exercise.videoUrl.split('v=')[1]?.split('&')[0];
         embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}` : '';
     } else if (exercise.videoUrl.includes('youtube.com/clip/')) {
-        // YouTube clip - use the full clip URL for embedding
-        embedUrl = exercise.videoUrl.replace('youtube.com/clip/', 'youtube.com/embed/');
+        // YouTube clip - use fallback since clips don't embed well
+        isClip = true;
     }
     
     card.innerHTML = `
@@ -274,6 +275,17 @@ function createExerciseCard(exercise) {
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen>
                         </iframe>
+                    </div>
+                ` : isClip ? `
+                    <div class="video-placeholder mb-4">
+                        <div class="text-center">
+                            <i class="fas fa-play-circle text-4xl mb-2"></i>
+                            <p class="text-sm">YouTube Clip Demo</p>
+                            <a href="${exercise.videoUrl}" target="_blank" class="text-blue-500 hover:text-blue-700 text-sm mt-2 block font-semibold">
+                                🎥 Watch Clip on YouTube
+                            </a>
+                            <p class="text-xs text-gray-500 mt-1">Click to open in new tab</p>
+                        </div>
                     </div>
                 ` : `
                     <div class="video-placeholder mb-4">
