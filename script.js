@@ -44,6 +44,16 @@ const exercises = [
     },
     {
         id: 5,
+        title: "Rotational Press Throw",
+        description: "Rotational medicine ball press throws to build explosive rotational power for hitting. Focus on hip and shoulder rotation.",
+        category: "strength",
+        sets: 3,
+        reps: "8-10 each side",
+        videoUrl: "https://youtube.com/clip/Ugkx7STpCmoXAnfEcAfgKwfnMO4VRoHFNE3l?si=3eyAywaTkpOZdElq",
+        icon: "🔄"
+    },
+    {
+        id: 6,
         title: "Plank Hold",
         description: "Strengthen core muscles essential for throwing accuracy and hitting power. Hold position with straight body.",
         category: "strength",
@@ -53,7 +63,7 @@ const exercises = [
         icon: "🧘‍♂️"
     },
     {
-        id: 6,
+        id: 7,
         title: "Lunges",
         description: "Improve balance and leg strength for fielding and base running. Step forward and lower back knee.",
         category: "strength",
@@ -63,7 +73,7 @@ const exercises = [
         icon: "🚶‍♂️"
     },
     {
-        id: 7,
+        id: 8,
         title: "High Knees",
         description: "Enhance running speed and coordination. Run in place bringing knees up to waist level.",
         category: "agility",
@@ -73,7 +83,7 @@ const exercises = [
         icon: "🏃"
     },
     {
-        id: 8,
+        id: 9,
         title: "Cone Weaves",
         description: "Develop quick direction changes for fielding. Weave through cones in zigzag pattern.",
         category: "agility",
@@ -83,7 +93,7 @@ const exercises = [
         icon: "🔸"
     },
     {
-        id: 9,
+        id: 10,
         title: "Burpees",
         description: "Full body conditioning combining strength and cardio. Squat, push-up, jump sequence.",
         category: "combo",
@@ -93,7 +103,7 @@ const exercises = [
         icon: "⚡"
     },
     {
-        id: 10,
+        id: 11,
         title: "Jump Rope",
         description: "Improve coordination and endurance. Practice basic jumps and variations.",
         category: "combo",
@@ -103,7 +113,7 @@ const exercises = [
         icon: "🔄"
     },
     {
-        id: 11,
+        id: 12,
         title: "Arm Circles",
         description: "Warm up shoulder muscles and improve flexibility. Small and large circles forward and backward.",
         category: "cooldown",
@@ -113,7 +123,7 @@ const exercises = [
         icon: "🔄"
     },
     {
-        id: 12,
+        id: 13,
         title: "Static Stretches",
         description: "Improve flexibility and prevent injury. Hold each stretch for 20-30 seconds.",
         category: "cooldown",
