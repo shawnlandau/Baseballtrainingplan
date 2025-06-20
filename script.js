@@ -249,9 +249,8 @@ function createExerciseCard(exercise) {
         videoId = exercise.videoUrl.split('v=')[1]?.split('&')[0];
         embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}` : '';
     } else if (exercise.videoUrl.includes('youtube.com/clip/')) {
-        // YouTube clip
-        videoId = exercise.videoUrl.split('clip/')[1]?.split('?')[0];
-        embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}` : '';
+        // YouTube clip - use the full clip URL for embedding
+        embedUrl = exercise.videoUrl.replace('youtube.com/clip/', 'youtube.com/embed/');
     }
     
     card.innerHTML = `
