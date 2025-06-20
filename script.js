@@ -29,7 +29,7 @@ const exercises = [
         category: "strength",
         sets: 3,
         reps: "10-12",
-        videoUrl: "https://www.youtube.com/watch?v=7AGu9JsmlFw",
+        videoUrl: "https://www.youtube.com/watch?v=8VcU2bOQyG8",
         icon: "🏐"
     },
     {
@@ -39,7 +39,7 @@ const exercises = [
         category: "strength",
         sets: 3,
         reps: "10-12",
-        videoUrl: "https://www.youtube.com/watch?v=7AGu9JsmlFw",
+        videoUrl: "https://www.youtube.com/watch?v=1fBhY9R5KZ0",
         icon: "💥"
     },
     {
