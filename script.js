@@ -59,7 +59,7 @@ const exercises = [
         category: "agility",
         sets: 3,
         reps: "2-3 patterns",
-        videoUrl: "https://www.youtube.com/watch?v=8jLOx-5QjYw",
+        videoUrl: "https://www.youtube.com/watch?v=ZpA6nVfP0pE",
         icon: "🪜"
     },
     {
