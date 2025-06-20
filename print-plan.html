@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baseball Training Program - Printable Workout Plan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .print-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #2563eb;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .exercise-card {
+            border: 2px solid #333;
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        
+        .category-title {
+            background: #2563eb;
+            color: white;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 20px 0 15px 0;
+            border-radius: 5px;
+        }
+        
+        .exercise-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #2563eb;
+            margin-bottom: 8px;
+        }
+        
+        .exercise-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 10px 0;
+        }
+        
+        .exercise-info {
+            background: #f3f4f6;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        
+        .visual-guide {
+            text-align: center;
+            background: #f9fafb;
+            padding: 15px;
+            border: 1px solid #d1d5db;
+            border-radius: 5px;
+        }
+        
+        .emoji-large {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        
+        .tips {
+            background: #dbeafe;
+            padding: 10px;
+            border-left: 4px solid #2563eb;
+            margin: 10px 0;
+        }
+        
+        @media print {
+            .print-button {
+                display: none;
+            }
+            
+            body {
+                background: white;
+                color: black;
+            }
+            
+            .exercise-card {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="print-button" onclick="window.print()">🖨️ Print Workout Plan</button>
+    
+    <div class="header">
+        <h1>⚾ Baseball Training Program</h1>
+        <h2>13U Player Workout Plan</h2>
+        <p><strong>Focus:</strong> Building hitting power, strength, and agility</p>
+        <p><strong>Duration:</strong> 45-60 minutes | <strong>Frequency:</strong> 3-4 times per week</p>
+    </div>
+
+    <div class="category-title">💪 Strength Training - Building Hitting Power</div>
+    
+    <div class="exercise-card">
+        <div class="exercise-title">1. Push-ups</div>
+        <div class="exercise-details">
+            <div class="exercise-info">
+                <p><strong>Sets:</strong> 3 | <strong>Reps:</strong> 10-15</p>
+                <p><strong>Focus:</strong> Upper body strength for throwing and hitting power</p>
+                <div class="tips">
+                    <strong>Form Tips:</strong>
+                    <ul>
+                        <li>Hands shoulder-width apart</li>
+                        <li>Keep body straight from head to heels</li>
+                        <li>Lower chest to ground, push back up</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="visual-guide">
+                <div class="emoji-large">💪</div>
+                <p><strong>Visual Guide:</strong></p>
+                <p>Start in plank position → Lower body → Push back up</p>
+                <p>Keep core tight throughout movement</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="exercise-card">
+        <div class="exercise-title">2. Squats</div>
+        <div class="exercise-details">
+            <div class="exercise-info">
+                <p><strong>Sets:</strong> 3 | <strong>Reps:</strong> 12-15</p>
+                <p><strong>Focus:</strong> Leg strength for base running and fielding</p>
+                <div class="tips">
+                    <strong>Form Tips:</strong>
+                    <ul>
+                        <li>Feet shoulder-width apart</li>
+                        <li>Go parallel to ground</li>
+                        <li>Keep chest up, knees behind toes</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="visual-guide">
+                <div class="emoji-large">🏋️‍♂️</div>
+                <p><strong>Visual Guide:</strong></p>
+                <p>Stand tall → Sit back like sitting in chair → Stand back up</p>
+                <p>Weight in heels, knees track over toes</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="exercise-card">
+        <div class="exercise-title">3. Medicine Ball Throws</div>
+        <div class="exercise-details">
+            <div class="exercise-info">
+                <p><strong>Sets:</strong> 3 | <strong>Reps:</strong> 10-12</p>
+                <p><strong>Focus:</strong> Explosive rotational power for hitting</p>
+                <div class="tips">
+                    <strong>Form Tips:</strong>
+                    <ul>
+                        <li>Use 6-8 lb medicine ball</li>
+                        <li>Rotate hips and shoulders together</li>
+                        <li>Throw against wall or to partner</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="visual-guide">
+                <div class="emoji-large">🏐</div>
+                <p><strong>Visual Guide:</strong></p>
+                <p>Hold ball at chest → Rotate hips → Throw explosively</p>
+                <p>Follow through with arms and hips</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="exercise-card">
+        <div class="exercise-title">4. Medicine Ball Slams</div>
+        <div class="exercise-details">
+            <div class="exercise-info">
+                <p><strong>Sets:</strong> 3 | <strong>Reps:</strong> 10-12</p>
+                <p><strong>Focus:</strong> Explosive overhead power for strong swings</p>
+                <div class="tips">
+                    <strong>Form Tips:</strong>
+                    <ul>
+                        <li>Hold ball overhead with straight arms</li>
+                        <li>Slam ball down with force</li>
+                        <li>Catch ball on bounce, repeat</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="visual-guide">
+                <div class="emoji-large">💥</div>
+                <p><strong>Visual Guide:</strong></p>
+                <p>Ball overhead → Slam down hard → Catch and repeat</p>
+                <p>Use full body power, not just arms</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="exercise-card">
+        <div class="exercise-title">5. Plank Hold</div>
+        <div class="exercise-details">
+            <div class="exercise-info">
+                <p><strong>Sets:</strong> 3 | <strong>Duration:</strong> 30-45 seconds</p>
+                <p><strong>Focus:</strong> Core strength for throwing accuracy and hitting power</p>
+                <div class="tips">
+                    <strong>Form Tips:</strong>
+                    <ul>
+                        <li>Hold position with straight body</li>
+                        <li>Engage core muscles</li>
+                        <li>Breathe steadily</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="visual-guide">
+                <div class="emoji-large">🧘‍♂️</div>
+                <p><strong>Visual Guide:</strong></p>
+                <p>Forearms on ground → Body straight line → Hold position</p>
+                <p>No sagging hips or raised butt</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="exercise-card">
+        <div class="exercise-title">6. Lunges</div>
+        <div class="exercise-details">
+            <div class="exercise-info">
+                <p><strong>Sets:</strong> 3 | <strong>Reps:</strong> 10 each leg</p>
+                <p><strong>Focus:</strong> Balance and leg strength for fielding and base running</p>
+                <div class="tips">
+                    <strong>Form Tips:</strong>
+                    <ul>
+                        <li>Step forward and lower back knee</li>
+                        <li>Keep front knee behind toe</li>
+                        <li>Alternate legs</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="visual-guide">
+                <div class="emoji-large">🚶‍♂️</div>
+                <p><strong>Visual Guide:</strong></p>
+                <p>Step forward → Lower back knee → Push back up</p>
+                <p>Keep upper body upright</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="category-title">🏃 Agility Drills - Speed and Quickness</div>
+    
+    <div class="exercise-card">
+        <div class="exercise-title">7. High Knees</div>
+        <div class="exercise-details">
+            <div class="exercise-info">
+                <p><strong>Sets:</strong> 3 | <strong>Duration:</strong> 30 seconds</p>
+                <p><strong>Focus:</strong> Running speed and coordination</p>
+                <div class="tips">
+                    <strong>Form Tips:</strong>
+                    <ul>
+                        <li>Run in place bringing knees up to waist level</li>
+                        <li>Pump arms naturally</li>
+                        <li>Stay on balls of feet</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="visual-guide">
+                <div class="emoji-large">🏃</div>
+                <p><strong>Visual Guide:</strong></p>
+                <p>Run in place → Bring knees up high → Pump arms</p>
+                <p>Stay light on feet, quick movements</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="exercise-card">
+        <div class="exercise-title">8. Cone Weaves</div>
+        <div class="exercise-details">
+            <div class="exercise-info">
+                <p><strong>Sets:</strong> 3 | <strong>Reps:</strong> 5-6 cones</p>
+                <p><strong>Focus:</strong> Quick direction changes for fielding</p>
+                <div class="tips">
+                    <strong>Form Tips:</strong>
+                    <ul>
+                        <li>Weave through cones in zigzag pattern</li>
+                        <li>Stay low and quick</li>
+                        <li>Use short, choppy steps</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="visual-guide">
+                <div class="emoji-large">🔸</div>
+                <p><strong>Visual Guide:</strong></p>
+                <p>Set up cones → Weave left and right → Quick turns</p>
+                <p>Stay under control, don't knock over cones</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="category-title">⚡ Combo Drills - Full Body Conditioning</div>
+    
+    <div class="exercise-card">
+        <div class="exercise-title">9. Burpees</div>
+        <div class="exercise-details">
+            <div class="exercise-info">
+                <p><strong>Sets:</strong> 3 | <strong>Reps:</strong> 8-10</p>
+                <p><strong>Focus:</strong> Full body conditioning combining strength and cardio</p>
+                <div class="tips">
+                    <strong>Form Tips:</strong>
+                    <ul>
+                        <li>Squat, push-up, jump sequence</li>
+                        <li>Keep movements fluid</li>
+                        <li>Land softly from jumps</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="visual-guide">
+                <div class="emoji-large">⚡</div>
+                <p><strong>Visual Guide:</strong></p>
+                <p>Squat down → Push-up → Jump up → Repeat</p>
+                <p>Full body movement, no stopping</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="exercise-card">
+        <div class="exercise-title">10. Jump Rope</div>
+        <div class="exercise-details">
+            <div class="exercise-info">
+                <p><strong>Sets:</strong> 3 | <strong>Duration:</strong> 1 minute</p>
+                <p><strong>Focus:</strong> Coordination and endurance</p>
+                <div class="tips">
+                    <strong>Form Tips:</strong>
+                    <ul>
+                        <li>Practice basic jumps and variations</li>
+                        <li>Stay on balls of feet</li>
+                        <li>Keep rope at proper length</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="visual-guide">
+                <div class="emoji-large">🔄</div>
+                <p><strong>Visual Guide:</strong></p>
+                <p>Hold rope handles → Jump over rope → Keep rhythm</p>
+                <p>Start slow, build speed gradually</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="category-title">🧊 Cool-down - Recovery and Flexibility</div>
+    
+    <div class="exercise-card">
+        <div class="exercise-title">11. Arm Circles</div>
+        <div class="exercise-details">
+            <div class="exercise-info">
+                <p><strong>Sets:</strong> 2 | <strong>Reps:</strong> 10 each direction</p>
+                <p><strong>Focus:</strong> Warm up shoulder muscles and improve flexibility</p>
+                <div class="tips">
+                    <strong>Form Tips:</strong>
+                    <ul>
+                        <li>Small and large circles forward and backward</li>
+                        <li>Keep movements controlled</li>
+                        <li>Feel shoulder muscles working</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="visual-guide">
+                <div class="emoji-large">🔄</div>
+                <p><strong>Visual Guide:</strong></p>
+                <p>Extend arms → Make circles → Forward and backward</p>
+                <p>Start small, make circles bigger</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="exercise-card">
+        <div class="exercise-title">12. Static Stretches</div>
+        <div class="exercise-details">
+            <div class="exercise-info">
+                <p><strong>Sets:</strong> 1 | <strong>Duration:</strong> 20-30 seconds each</p>
+                <p><strong>Focus:</strong> Improve flexibility and prevent injury</p>
+                <div class="tips">
+                    <strong>Form Tips:</strong>
+                    <ul>
+                        <li>Hold each stretch for 20-30 seconds</li>
+                        <li>Don't bounce, hold steady</li>
+                        <li>Breathe deeply during stretches</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="visual-guide">
+                <div class="emoji-large">🧘‍♀️</div>
+                <p><strong>Visual Guide:</strong></p>
+                <p>Stretch muscle → Hold position → Breathe deeply</p>
+                <p>Should feel tension, not pain</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top: 40px; text-align: center; border-top: 1px solid #d1d5db; padding-top: 20px;">
+        <h3>📋 Workout Tips</h3>
+        <ul style="text-align: left; max-width: 600px; margin: 0 auto;">
+            <li><strong>Warm-up:</strong> Always start with 5-10 minutes of light cardio and dynamic stretching</li>
+            <li><strong>Form First:</strong> Focus on proper technique over speed or weight</li>
+            <li><strong>Rest:</strong> Take 60-90 seconds between sets</li>
+            <li><strong>Hydration:</strong> Drink water throughout your workout</li>
+            <li><strong>Progression:</strong> Increase reps or weight gradually as you get stronger</li>
+            <li><strong>Listen to Your Body:</strong> Stop if you feel pain or extreme fatigue</li>
+        </ul>
+        
+        <p style="margin-top: 20px;"><strong>⚾ Baseball Training Program - Designed for 13U Players</strong></p>
+        <p>Print Date: <span id="print-date"></span></p>
+    </div>
+
+    <script>
+        document.getElementById('print-date').textContent = new Date().toLocaleDateString();
+    </script>
+</body>
+</html> 
