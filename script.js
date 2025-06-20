@@ -230,6 +230,10 @@ function createExerciseCard(exercise) {
     const completedSets = progress.completedSets;
     const isCompleted = completedSets >= exercise.sets;
     
+    // Extract YouTube video ID from URL
+    const videoId = exercise.videoUrl.split('v=')[1]?.split('&')[0];
+    const embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}` : '';
+    
     card.innerHTML = `
         <div class="p-6">
             <div class="flex items-center justify-between mb-3">
@@ -240,14 +244,29 @@ function createExerciseCard(exercise) {
             <h3 class="exercise-title text-xl font-bold text-gray-800 mb-2">${exercise.title}</h3>
             <p class="text-gray-600 text-sm mb-4">${exercise.description}</p>
             
-            <div class="video-placeholder mb-4">
-                <div class="text-center">
-                    <i class="fas fa-play-circle text-4xl mb-2"></i>
-                    <p class="text-sm">Demo Video</p>
-                    <a href="${exercise.videoUrl}" target="_blank" class="text-blue-500 hover:text-blue-700 text-xs mt-1 block">
-                        Watch on YouTube
-                    </a>
-                </div>
+            <div class="mb-4">
+                ${embedUrl ? `
+                    <div class="relative w-full" style="padding-bottom: 56.25%;">
+                        <iframe 
+                            class="absolute top-0 left-0 w-full h-full rounded-lg"
+                            src="${embedUrl}?rel=0&modestbranding=1"
+                            title="${exercise.title} - Exercise Demo"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                ` : `
+                    <div class="video-placeholder mb-4">
+                        <div class="text-center">
+                            <i class="fas fa-play-circle text-4xl mb-2"></i>
+                            <p class="text-sm">Demo Video</p>
+                            <a href="${exercise.videoUrl}" target="_blank" class="text-blue-500 hover:text-blue-700 text-xs mt-1 block">
+                                Watch on YouTube
+                            </a>
+                        </div>
+                    </div>
+                `}
             </div>
             
             <div class="mb-4">

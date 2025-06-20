@@ -58,6 +58,16 @@
     background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
 }
 
+/* Embedded video styles */
+.video-container {
+    @apply relative w-full rounded-lg overflow-hidden;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+}
+
+.video-container iframe {
+    @apply absolute top-0 left-0 w-full h-full;
+}
+
 /* Progress checkbox styles */
 .progress-checkbox {
     @apply w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2;
@@ -188,6 +198,15 @@
     
     .filter-btn {
         @apply text-sm px-3 py-1;
+    }
+    
+    .video-container {
+        margin: 0 -1rem; /* Extend to edges on mobile */
+        border-radius: 0;
+    }
+    
+    .video-container iframe {
+        border-radius: 0;
     }
 }
 
