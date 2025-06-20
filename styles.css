@@ -1,0 +1,223 @@
+/* Custom styles to complement Tailwind CSS */
+
+/* Navigation styles */
+.nav-link {
+    @apply px-3 py-2 rounded-lg transition-all duration-200 hover:bg-blue-700 hover:scale-105;
+}
+
+.nav-link.active {
+    @apply bg-blue-700 shadow-md;
+}
+
+.nav-link-mobile {
+    @apply px-3 py-2 rounded-lg transition-all duration-200 hover:bg-blue-700 text-left;
+}
+
+.nav-link-mobile.active {
+    @apply bg-blue-700;
+}
+
+/* Section transitions */
+.section {
+    @apply transition-all duration-300 ease-in-out;
+}
+
+.section.hidden {
+    @apply opacity-0 pointer-events-none;
+}
+
+.section.active {
+    @apply opacity-100;
+}
+
+/* Filter button styles */
+.filter-btn {
+    @apply px-4 py-2 rounded-lg bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-200 transform hover:scale-105;
+}
+
+.filter-btn.active {
+    @apply bg-blue-500 text-white shadow-md;
+}
+
+/* Exercise card styles */
+.exercise-card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1;
+}
+
+.exercise-card.completed {
+    @apply border-2 border-green-500 bg-green-50;
+}
+
+.exercise-card.completed .exercise-title {
+    @apply text-green-700;
+}
+
+/* Video placeholder styles */
+.video-placeholder {
+    @apply bg-gray-200 rounded-lg flex items-center justify-center h-48 text-gray-500;
+    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+}
+
+/* Progress checkbox styles */
+.progress-checkbox {
+    @apply w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2;
+}
+
+/* Set counter styles */
+.set-counter {
+    @apply flex items-center space-x-2 bg-gray-100 rounded-lg px-3 py-2;
+}
+
+/* Category badges */
+.category-badge {
+    @apply inline-block px-2 py-1 text-xs font-semibold rounded-full;
+}
+
+.category-strength {
+    @apply bg-red-100 text-red-800;
+}
+
+.category-agility {
+    @apply bg-green-100 text-green-800;
+}
+
+.category-combo {
+    @apply bg-purple-100 text-purple-800;
+}
+
+.category-cooldown {
+    @apply bg-blue-100 text-blue-800;
+}
+
+/* Progress bar styles */
+.progress-bar {
+    @apply w-full bg-gray-200 rounded-full h-2;
+}
+
+.progress-fill {
+    @apply bg-gradient-to-r from-blue-500 to-green-500 h-2 rounded-full transition-all duration-500;
+}
+
+/* Animation classes */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-in {
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Mobile menu animation */
+#mobile-menu {
+    transition: all 0.3s ease-in-out;
+}
+
+#mobile-menu.hidden {
+    max-height: 0;
+    overflow: hidden;
+}
+
+#mobile-menu:not(.hidden) {
+    max-height: 200px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-blue-500 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-blue-600;
+}
+
+/* Loading animation */
+.loading {
+    @apply animate-pulse bg-gray-200 rounded;
+}
+
+/* Success animation */
+.success-animation {
+    animation: successPulse 0.6s ease-in-out;
+}
+
+@keyframes successPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .exercise-card {
+        @apply mx-2;
+    }
+    
+    .filter-btn {
+        @apply text-sm px-3 py-1;
+    }
+}
+
+/* Print styles */
+@media print {
+    .nav-link, .filter-btn, button {
+        display: none !important;
+    }
+    
+    .exercise-card {
+        @apply shadow-none border border-gray-300;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .exercise-card {
+        @apply border-2 border-gray-800;
+    }
+    
+    .filter-btn {
+        @apply border-2 border-gray-800;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+} 

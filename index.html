@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baseball Training Program - 13U Player</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-blue-600 text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-baseball-ball text-2xl"></i>
+                    <h1 class="text-xl font-bold">Baseball Training</h1>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <button onclick="showSection('home')" class="nav-link active">🏠 Home</button>
+                    <button onclick="showSection('progress')" class="nav-link">📊 My Progress</button>
+                    <button onclick="showSection('about')" class="nav-link">ℹ️ About</button>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-white">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <div class="flex flex-col space-y-2">
+                    <button onclick="showSection('home')" class="nav-link-mobile active">🏠 Home</button>
+                    <button onclick="showSection('progress')" class="nav-link-mobile">📊 My Progress</button>
+                    <button onclick="showSection('about')" class="nav-link-mobile">ℹ️ About</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-4 py-8">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">🏋️‍♂️ Baseball Training Program</h2>
+                <p class="text-gray-600">Complete workout plan for 13-year-old baseball players</p>
+            </div>
+
+            <!-- Category Filter -->
+            <div class="flex flex-wrap justify-center gap-2 mb-8">
+                <button onclick="filterExercises('all')" class="filter-btn active">All</button>
+                <button onclick="filterExercises('strength')" class="filter-btn">💪 Strength</button>
+                <button onclick="filterExercises('agility')" class="filter-btn">🏃 Agility</button>
+                <button onclick="filterExercises('combo')" class="filter-btn">⚡ Combo Drills</button>
+                <button onclick="filterExercises('cooldown')" class="filter-btn">🧊 Cool-down</button>
+            </div>
+
+            <!-- Exercises Grid -->
+            <div id="exercises-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Exercises will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Progress Section -->
+        <section id="progress" class="section hidden">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">📊 My Progress</h2>
+                <p class="text-gray-600">Track your training journey</p>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-xl font-semibold">Overall Progress</h3>
+                    <button onclick="resetProgress()" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg transition-colors">
+                        <i class="fas fa-redo mr-2"></i>Reset Progress
+                    </button>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-blue-600" id="total-exercises">0</div>
+                        <div class="text-sm text-gray-600">Total Exercises</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-green-600" id="completed-exercises">0</div>
+                        <div class="text-sm text-gray-600">Completed</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-purple-600" id="completion-rate">0%</div>
+                        <div class="text-sm text-gray-600">Completion Rate</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-orange-600" id="total-sets">0</div>
+                        <div class="text-sm text-gray-600">Sets Completed</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="progress-exercises">
+                <!-- Progress cards will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section hidden">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-2">ℹ️ About This Program</h2>
+                    <p class="text-gray-600">Designed specifically for 13-year-old baseball players</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                    <h3 class="text-xl font-semibold mb-4">🏋️‍♂️ Program Overview</h3>
+                    <p class="text-gray-700 mb-4">
+                        This comprehensive training program is designed to develop strength, agility, and baseball-specific skills for young athletes. 
+                        Each exercise is carefully selected to improve performance on the field while ensuring proper form and safety.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                        <div>
+                            <h4 class="font-semibold text-blue-600 mb-2">💪 Strength Training</h4>
+                            <p class="text-gray-600 text-sm">Build core strength and power for hitting and throwing</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-green-600 mb-2">🏃 Agility Drills</h4>
+                            <p class="text-gray-600 text-sm">Improve speed, quickness, and fielding ability</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-purple-600 mb-2">⚡ Combo Drills</h4>
+                            <p class="text-gray-600 text-sm">Combine multiple skills for game-like scenarios</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-orange-600 mb-2">🧊 Cool-down</h4>
+                            <p class="text-gray-600 text-sm">Proper recovery and flexibility maintenance</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold mb-4">📋 Training Tips</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            Always warm up properly before starting any exercise
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            Focus on proper form over speed or weight
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            Take rest days between intense training sessions
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            Stay hydrated throughout your workout
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            Listen to your body and don't push through pain
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-6 mt-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <p>&copy; 2024 Baseball Training Program. Built for young athletes! ⚾</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
