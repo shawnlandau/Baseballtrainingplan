@@ -241,8 +241,18 @@ function createExerciseCard(exercise) {
     const isCompleted = completedSets >= exercise.sets;
     
     // Extract YouTube video ID from URL
-    const videoId = exercise.videoUrl.split('v=')[1]?.split('&')[0];
-    const embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}` : '';
+    let videoId = '';
+    let embedUrl = '';
+    
+    if (exercise.videoUrl.includes('youtube.com/watch?v=')) {
+        // Regular YouTube video
+        videoId = exercise.videoUrl.split('v=')[1]?.split('&')[0];
+        embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}` : '';
+    } else if (exercise.videoUrl.includes('youtube.com/clip/')) {
+        // YouTube clip
+        videoId = exercise.videoUrl.split('clip/')[1]?.split('?')[0];
+        embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}` : '';
+    }
     
     card.innerHTML = `
         <div class="p-6">
