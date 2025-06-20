@@ -9,7 +9,7 @@ const exercises = [
         category: "strength",
         sets: 3,
         reps: "10-15",
-        videoUrl: "https://www.youtube.com/watch?v=IODxDxX7oi4",
+        videoUrl: "https://www.youtube.com/embed/IODxDxX7oi4",
         icon: "💪"
     },
     {
@@ -19,7 +19,7 @@ const exercises = [
         category: "strength",
         sets: 3,
         reps: "12-15",
-        videoUrl: "https://www.youtube.com/watch?v=aclHkVaku9U",
+        videoUrl: "https://www.youtube.com/embed/aclHkVaku9U",
         icon: "🏋️‍♂️"
     },
     {
@@ -29,7 +29,7 @@ const exercises = [
         category: "strength",
         sets: 3,
         reps: "10-12",
-        videoUrl: "https://youtube.com/clip/UgkxvgRM0K6XWSHdKfA2Sen8WQWshHICOEEp?si=KzU3l6CB_WOG5j3a",
+        videoUrl: "https://www.youtube.com/embed/fPTqG3RiQMw?si=yTK9n8yKE6RwM23Y&clip=UgkxYw2fpSAJGLx-JvDCMUGupQMdRnMCgxVw&clipt=EPiyAhiJ2wM",
         icon: "🏐"
     },
     {
@@ -39,7 +39,7 @@ const exercises = [
         category: "strength",
         sets: 3,
         reps: "10-12",
-        videoUrl: "https://youtube.com/clip/Ugkx-yRTOyYskJlZglGoe4TyWLVtfrWe869h?si=sV0-L_wRqFF0zsd4",
+        videoUrl: "https://www.youtube.com/embed/fPTqG3RiQMw?si=yTK9n8yKE6RwM23Y&clip=Ugkx-yRTOyYskJlZglGoe4TyWLVtfrWe869h&clipt=EPiyAhiJ2wM",
         icon: "💥"
     },
     {
@@ -49,7 +49,7 @@ const exercises = [
         category: "strength",
         sets: 3,
         reps: "8-10 each side",
-        videoUrl: "https://youtube.com/clip/Ugkx7STpCmoXAnfEcAfgKwfnMO4VRoHFNE3l?si=3eyAywaTkpOZdElq",
+        videoUrl: "https://www.youtube.com/embed/fPTqG3RiQMw?si=yTK9n8yKE6RwM23Y&clip=Ugkx7STpCmoXAnfEcAfgKwfnMO4VRoHFNE3l&clipt=EPiyAhiJ2wM",
         icon: "🔄"
     },
     {
@@ -59,7 +59,7 @@ const exercises = [
         category: "strength",
         sets: 3,
         reps: "30-45 seconds",
-        videoUrl: "https://www.youtube.com/watch?v=ASdvN_XEl_c",
+        videoUrl: "https://www.youtube.com/embed/ASdvN_XEl_c",
         icon: "🧘‍♂️"
     },
     {
@@ -69,7 +69,7 @@ const exercises = [
         category: "strength",
         sets: 3,
         reps: "10 each leg",
-        videoUrl: "https://www.youtube.com/watch?v=3XDriUn0udo",
+        videoUrl: "https://www.youtube.com/embed/3XDriUn0udo",
         icon: "🚶‍♂️"
     },
     {
@@ -79,7 +79,7 @@ const exercises = [
         category: "agility",
         sets: 3,
         reps: "30 seconds",
-        videoUrl: "https://www.youtube.com/watch?v=oDdkytliOqE",
+        videoUrl: "https://www.youtube.com/embed/oDdkytliOqE",
         icon: "🏃"
     },
     {
@@ -89,7 +89,7 @@ const exercises = [
         category: "agility",
         sets: 3,
         reps: "5-6 cones",
-        videoUrl: "https://www.youtube.com/watch?v=8jLOx-5QjYw",
+        videoUrl: "https://www.youtube.com/embed/8jLOx-5QjYw",
         icon: "🔸"
     },
     {
@@ -99,7 +99,7 @@ const exercises = [
         category: "combo",
         sets: 3,
         reps: "8-10",
-        videoUrl: "https://www.youtube.com/watch?v=auBLPXO8Fww",
+        videoUrl: "https://www.youtube.com/embed/auBLPXO8Fww",
         icon: "⚡"
     },
     {
@@ -109,7 +109,7 @@ const exercises = [
         category: "combo",
         sets: 3,
         reps: "1 minute",
-        videoUrl: "https://www.youtube.com/watch?v=1BZM2Vre5oc",
+        videoUrl: "https://www.youtube.com/embed/1BZM2Vre5oc",
         icon: "🔄"
     },
     {
@@ -119,7 +119,7 @@ const exercises = [
         category: "cooldown",
         sets: 2,
         reps: "10 each direction",
-        videoUrl: "https://www.youtube.com/watch?v=140RTNMciH8",
+        videoUrl: "https://www.youtube.com/embed/140RTNMciH8",
         icon: "🔄"
     },
     {
@@ -129,7 +129,7 @@ const exercises = [
         category: "cooldown",
         sets: 1,
         reps: "20-30 seconds each",
-        videoUrl: "https://www.youtube.com/watch?v=4pKly2JojMw",
+        videoUrl: "https://www.youtube.com/embed/4pKly2JojMw",
         icon: "🧘‍♀️"
     }
 ];
@@ -241,17 +241,15 @@ function createExerciseCard(exercise) {
     const isCompleted = completedSets >= exercise.sets;
     
     // Extract YouTube video ID from URL
-    let videoId = '';
     let embedUrl = '';
-    let isClip = false;
     
     if (exercise.videoUrl.includes('youtube.com/watch?v=')) {
         // Regular YouTube video
-        videoId = exercise.videoUrl.split('v=')[1]?.split('&')[0];
+        const videoId = exercise.videoUrl.split('v=')[1]?.split('&')[0];
         embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}` : '';
-    } else if (exercise.videoUrl.includes('youtube.com/clip/')) {
-        // YouTube clip - use fallback since clips don't embed well
-        isClip = true;
+    } else if (exercise.videoUrl.includes('youtube.com/embed/')) {
+        // Already an embed URL - use as is
+        embedUrl = exercise.videoUrl;
     }
     
     card.innerHTML = `
@@ -269,23 +267,12 @@ function createExerciseCard(exercise) {
                     <div class="relative w-full" style="padding-bottom: 56.25%;">
                         <iframe 
                             class="absolute top-0 left-0 w-full h-full rounded-lg"
-                            src="${embedUrl}?rel=0&modestbranding=1"
+                            src="${embedUrl}${embedUrl.includes('?') ? '&' : '?'}rel=0&modestbranding=1&showinfo=0"
                             title="${exercise.title} - Exercise Demo"
                             frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen>
                         </iframe>
-                    </div>
-                ` : isClip ? `
-                    <div class="video-placeholder mb-4">
-                        <div class="text-center">
-                            <i class="fas fa-play-circle text-4xl mb-2"></i>
-                            <p class="text-sm">YouTube Clip Demo</p>
-                            <a href="${exercise.videoUrl}" target="_blank" class="text-blue-500 hover:text-blue-700 text-sm mt-2 block font-semibold">
-                                🎥 Watch Clip on YouTube
-                            </a>
-                            <p class="text-xs text-gray-500 mt-1">Click to open in new tab</p>
-                        </div>
                     </div>
                 ` : `
                     <div class="video-placeholder mb-4">
