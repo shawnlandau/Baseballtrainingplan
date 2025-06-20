@@ -24,6 +24,26 @@ const exercises = [
     },
     {
         id: 3,
+        title: "Medicine Ball Throws",
+        description: "Explosive rotational throws to build core and upper body power for hitting. Use a wall or partner.",
+        category: "strength",
+        sets: 3,
+        reps: "10-12",
+        videoUrl: "https://www.youtube.com/watch?v=8VcU2bOQyG8",
+        icon: "🏐"
+    },
+    {
+        id: 4,
+        title: "Medicine Ball Slams",
+        description: "Overhead slams to develop explosive power in the core and upper body, crucial for strong swings.",
+        category: "strength",
+        sets: 3,
+        reps: "10-12",
+        videoUrl: "https://www.youtube.com/watch?v=1fBhY9R5KZ0",
+        icon: "💥"
+    },
+    {
+        id: 5,
         title: "Plank Hold",
         description: "Strengthen core muscles essential for throwing accuracy and hitting power. Hold position with straight body.",
         category: "strength",
@@ -33,7 +53,7 @@ const exercises = [
         icon: "🧘‍♂️"
     },
     {
-        id: 4,
+        id: 6,
         title: "Lunges",
         description: "Improve balance and leg strength for fielding and base running. Step forward and lower back knee.",
         category: "strength",
@@ -43,7 +63,7 @@ const exercises = [
         icon: "🚶‍♂️"
     },
     {
-        id: 5,
+        id: 7,
         title: "High Knees",
         description: "Enhance running speed and coordination. Run in place bringing knees up to waist level.",
         category: "agility",
@@ -53,17 +73,7 @@ const exercises = [
         icon: "🏃"
     },
     {
-        id: 6,
-        title: "Ladder Drills",
-        description: "Improve foot speed and agility for fielding. Practice quick feet through agility ladder.",
-        category: "agility",
-        sets: 3,
-        reps: "2-3 patterns",
-        videoUrl: "https://www.youtube.com/watch?v=ZpA6nVfP0pE",
-        icon: "🪜"
-    },
-    {
-        id: 7,
+        id: 8,
         title: "Cone Weaves",
         description: "Develop quick direction changes for fielding. Weave through cones in zigzag pattern.",
         category: "agility",
@@ -73,7 +83,7 @@ const exercises = [
         icon: "🔸"
     },
     {
-        id: 8,
+        id: 9,
         title: "Burpees",
         description: "Full body conditioning combining strength and cardio. Squat, push-up, jump sequence.",
         category: "combo",
@@ -81,16 +91,6 @@ const exercises = [
         reps: "8-10",
         videoUrl: "https://www.youtube.com/watch?v=auBLPXO8Fww",
         icon: "⚡"
-    },
-    {
-        id: 9,
-        title: "Medicine Ball Throws",
-        description: "Build throwing power and core strength. Throw medicine ball against wall or to partner.",
-        category: "combo",
-        sets: 3,
-        reps: "10-12",
-        videoUrl: "https://www.youtube.com/watch?v=8jLOx-5QjYw",
-        icon: "🏐"
     },
     {
         id: 10,
